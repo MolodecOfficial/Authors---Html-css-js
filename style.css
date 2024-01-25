@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: ascii;
+    src: url(fonts/Minecraft_Rus.otf) format("opentype");
+}
+
+body {
+    font-family: ascii, serif;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.img-box {
+    color: white;
+    text-align: center;
+    display: inline;
+    min-height: 100vh;
+    background: var(--img) center;
+    background-size: cover;
+    flex-basis: 350px;
+    transition: 400ms all ease;
+    filter: grayscale(100%) opacity(35%);
+    border-radius: 20px 20px;
+}
+
+.img-box:hover {
+    flex-basis: 400px;
+    filter: grayscale(0%) opacity(100%);
+}
+
+.img-desc {
+    position: absolute;
+    inset: 0;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+.name-tags {
+    position: absolute;
+    inset: 0;
+    top: 75px;
+}
+.img-box:hover .name-tags {
+    display: inline;
+    color: #f5f5dc;
+    text-align: center;
+    top: 65px;
+    font-size: 19px;
+    justify-content: center;
+    align-items: end;
+    vertical-align: middle;
+    opacity: 1;
+}
+
+.img-box:hover .img-desc {
+    vertical-align: middle;
+    color: #f5f5dc;
+    display: inline;
+    top: 650px;
+    text-align: center;
+    justify-content: end;
+    align-items: end;
+    visibility: visible;
+    opacity: 1;
+}
